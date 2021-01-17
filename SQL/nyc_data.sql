@@ -27,6 +27,7 @@ CREATE INDEX ON rides (vendor_id, pickup_datetime desc);
 CREATE INDEX ON rides (pickup_datetime desc, vendor_id);
 CREATE INDEX ON rides (rate_code, pickup_datetime DESC);
 CREATE INDEX ON rides (passenger_count, pickup_datetime desc);
+\COPY rides FROM data/nyc_data_rides.csv CSV
 
 CREATE TABLE IF NOT EXISTS "payment_types"(
     payment_type INTEGER,
