@@ -8,13 +8,15 @@ New York City is home to more than 8.3 million people. In this dashboard, we can
 
 ## Getting Started
 
-Start all services:
+1. Start all services:
 
 ```
 docker-compose up -d
 ```
 
-Load all NYC Data:
+2. Create a data directory and add the [NYC taxi data](https://docs.timescale.com/latest/tutorials/tutorial-hello-timescale)
+
+3. Next create all tables in Timescaledb:
 
 ```
 psql --u postgres -h localhost -d postgres < SQL/nyc_data.sql
